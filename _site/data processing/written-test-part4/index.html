@@ -1,0 +1,1527 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <!--폰트 : "Nanum Gothic Coding", "Coming Soon"-->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Nanum+Gothic+Coding&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Nanum+Gothic+Coding&display=swap">
+    
+    <!--폰트 : "Iropke Batang"-->
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css">
+
+    <!--폰트 : "Cafe24Oneprettynight"-->
+    
+    <!--main.scss 조금이라도 빨리 로드 되길.. preload-->
+    <link rel="preload" as="style" href="/assets/css/main.css">
+
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[ 필기 ] 프로세스(Process) Part.1  -  공공돌 블로그</title>
+<meta name="description" content="강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.  ">
+
+
+  <meta name="author" content="공부하는 공돌이📖">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content=" 공공돌 블로그 ">
+<meta property="og:title" content="[ 필기 ] 프로세스(Process) Part.1">
+<meta property="og:url" content="http://localhost:4000/data%20processing/written-test-part4/">
+
+
+  <meta property="og:description" content="강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.  ">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/my-cat.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2022-02-22T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2022-02-22T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/data%20processing/written-test-part4/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "공공돌🧸",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title=" 공공돌 블로그  Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end custom head snippets -->
+
+    <!-- 스크롤바 커스터마이징 -->
+    <style> 
+      ::-webkit-scrollbar{width: 16px;}
+      ::-webkit-scrollbar-track {background-color:#4b4f52; border-radius: 16px;}
+      ::-webkit-scrollbar-thumb {background-color:#5e6265; border-radius: 16px;}
+      ::-webkit-scrollbar-thumb:hover {background: #ffd24c;}
+      ::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment 
+      {
+          width:12px;height:12px;background:transparent;}
+      }  
+
+      
+    </style>
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+           공공돌 블로그 
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/index.html">Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Category</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">카테고리 Click</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#data-processing" itemprop="item"><span itemprop="name">Data processing</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">[ 필기 ] 프로세스(Process) Part.1 </li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/my-cat.png" alt="공부하는 공돌이📖" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">공부하는 공돌이📖</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Development Diary 🧸</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="bohg6799@naver.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/Sheep1sik" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+
+  
+    
+
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">카테고리 Click</label>
+  <ul class="nav__items" id="category_tag_menu">
+      <li>
+            📂 <span style="font-family:'Cafe24Oneprettynight';">전체 글 수</style> <span style="font-family:'Coming Soon';">25</style> <span style="font-family:'Cafe24Oneprettynight';">개</style> 
+      </li>
+      <li>
+        <span class="nav__sub-title">Project</span>
+        <ul>
+            
+                
+            
+                
+            
+                
+                    <li><a href="/categories/create-web" class="">기초부터 웹사이트 만들기 (1)</a></li>
+                
+            
+                
+            
+        </ul>
+        <span class="nav__sub-title">etc</span>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <li><a href="/categories/data-processing" class="">정보처리 산업기사 (20)</a></li>
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                        <li><a href="/categories/blog" class="">Blog (1)</a></li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                        <li><a href="/categories/error" class="">오류 해결 (3)</a></li>
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        <!-- 리스트 예제
+            <span class="nav__sub-title">etc</span>
+            <ul>
+                
+                    
+                        <li><a href="/categories/blog" class="">Blog Dev (1)</a></li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <span class="nav__sub-title">C/C++/C#</span>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+
+        <span class="nav__sub-title">Coding Test</span>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+
+        <span class="nav__sub-title">Unity</span>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+
+        <span class="nav__sub-title">UE4</span>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        
+        <span class="nav__sub-title">CS</span>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        <span class="nav__sub-title">Server</span>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        <span class="nav__sub-title">DB</span>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        <span class="nav__sub-title">etc</span>
+            <ul>
+                
+                    
+                        <li><a href="/categories/blog" class="">Blog Dev (1)</a></li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+            <ul>
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul> -->
+      </li>
+  </ul>
+</nav>
+
+
+  
+
+  </div>
+
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[ 필기 ] 프로세스(Process) Part.1">
+    <meta itemprop="description" content="강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.">
+    <meta itemprop="datePublished" content="2022-02-22T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2022-02-22T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">[ 필기 ] 프로세스(Process) Part.1
+</h1>
+          
+            <p class="page__meta"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Date:</strong> <time datetime="2022-02-22T00:00:00+09:00">2022.02.22</time>&nbsp&nbsp&nbsp<strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-02-22">2022.02.22</time></p>
+          
+          
+            
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#data-processing" class="page__taxonomy-item-category" rel="tag">Data processing</a>
+    
+    </span>
+  </p>
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#%EC%9E%90%EA%B2%A9%EC%A6%9D" class="page__taxonomy-item-tag" rel="tag">자격증</a><span class="sep"> </span>
+    
+      
+      
+      <a href="/tags/#%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EC%82%B0%EC%97%85%EA%B8%B0%EC%82%AC" class="page__taxonomy-item-tag" rel="tag">정보처리산업기사</a><span class="sep"> </span>
+    
+      
+      
+      <a href="/tags/#%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4" class="page__taxonomy-item-tag" rel="tag">프로세스</a>
+    
+    </span>
+  </p>
+
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-align-left"></i> 목차</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#1-프로세스-정의">1. 프로세스 정의</a></li>
+  <li><a href="#2-프로세스-상태-전이도">2. 프로세스 상태 전이도</a></li>
+  <li><a href="#3-주요-프로세스-상태">3. 주요 프로세스 상태</a>
+    <ul>
+      <li><a href="#3-1-제출submit">3-1 제출(Submit)</a></li>
+    </ul>
+  </li>
+  <li><a href="#4-상태-전이">4. 상태 전이</a>
+    <ul>
+      <li><a href="#4-1-디스패치dispatch">4-1 디스패치(Dispatch)</a></li>
+    </ul>
+  </li>
+  <li><a href="#5-장치-및-기술">5. 장치 및 기술</a>
+    <ul>
+      <li><a href="#5-1-스풀spool">5-1 스풀(Spool)</a></li>
+    </ul>
+  </li>
+  <li><a href="#6-프로세스의-자원-이동-순서">6. 프로세스의 자원 이동 순서</a>
+    <ul>
+      <li><a href="#6-1-요청">6-1 요청</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <p>강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.</p>
+
+<hr />
+<h2 id="1-프로세스-정의">1. 프로세스 정의</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CPU에 의해서 현재 실행되고 있는 프로그램
+PCB의 존재로서 명시되는 것
+프로세서(CPU)가 할당되는 개체로서 디스패치가 가능한 단위
+지정된 결과를 얻기 위한 일련의 계통적 동작
+목적 또는 결과에 따라 발생되는 사건들의 과정
+비동기적 행위를 일으키는 주체
+프로시저가 활동 중인 것
+실행 중인 프로시저의 제어 궤적
+CPU가 할당되는 실체
+</code></pre></div></div>
+
+<h2 id="2-프로세스-상태-전이도">2. 프로세스 상태 전이도</h2>
+<p><img src="https://user-images.githubusercontent.com/88019314/155084282-e7f538d8-c824-472a-bce7-ff6153c1e456.png" alt="(Ready)" /></p>
+
+<h2 id="3-주요-프로세스-상태">3. 주요 프로세스 상태</h2>
+
+<h3 id="3-1-제출submit">3-1 제출(Submit)</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>작업을 처리하기 위해 사용자가 작업을 시스템에 제출한 상태 ### 3-2 접수(Hold)
+제출된 작업이 스풀 공간인 디스크 할당 위치에 저장된 상태 ### 3-3 준비(Ready) 
+프로세스가 프로세서를 할당받기 위해 기다리고 있는 상태	
+프로세스는 준비상태 큐 에서 실행 준비
+접수 상태에서 준비 상태로의 전이는 Job 스케줄러에 의해 수행 ### 3-4 실행(Run)
+준비상태 큐에 있는 프로세스가 프로세서를 할당받아 실행되는 상태
+프로세스 수행이 완료되기전에 프로세스에게 주어진 프로세서 할당 시간이 종료되면 프로세스는 준비 상태로 전이된다	
+준비상태에서 실행 상태로의 전이는 CPU 스케줄러에 의해 수행 ### 3-5 대기(Wait), 보류, 블록(Block)
+프로세스에 입출력처리가 필요하면 현재 실행중인 프로세스가 중단되고, 입출력 처리가 완료될때까지 대기하고 있는 상태이다. ### 3-6 종료(Terminated Exit) 
+프로세스의 실행이 끝나고 프로세스 할당이 해제된 상태이다.
+</code></pre></div></div>
+
+<h2 id="4-상태-전이">4. 상태 전이</h2>
+
+<h3 id="4-1-디스패치dispatch">4-1 디스패치(Dispatch)</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>준비 상태에서 대기하고 있는 프로세스 중 하나가 CPU를 할당 받아 실행 상태로 변하는 시점이다. ### 4-2 Time run out ( 선점, 시간 초과 )
+자신에 할당된 시간 만큼 CPU를 사용하고 준비상태로 변하는 시점이다 ### 4-3 I/O 요구 ( 입 / 출력 발생 )
+프로세스가 CPU를 사용 중에 I/O 행위가 필요하여 보류 상태로 이동하는 시점이다. ### 4-4 Wake up
+I/O 작업이 완료되어 준비 상태로 이동하는 시점이다 ### 4-5 Suspend
+대기 상태에서 운영체제에 의해 일시적으로 벗어나는 상태이다 ### 4-6 Resume
+Suspended에서 프로세스 활성화 상태로 다시 복귀
+</code></pre></div></div>
+
+<h2 id="5-장치-및-기술">5. 장치 및 기술</h2>
+
+<h3 id="5-1-스풀spool">5-1 스풀(Spool)</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>입출력(I/O) 장치와 속도 차를 극복하기 위한 장치로 대부분 하드디스크가 중재한다.
+스풀은 영역, 스풀링(Spooling)은 행위 자체, 스풀러(Spooler)는 프로그램이다 ### 5-2 버퍼링(Buffering)
+CPU와 입출력 장치와의 속도 차이를 줄이기 위해 메모리가 중재한다 ### 5-3 채널(Channel)
+입출력만을 담당하는 소형 컴퓨터로 간단한 명령 구조와 레지스터를 가지고 있으며 입출력 장치와 통신하기 위한 간단한 장치로 구성되어 있다.
+</code></pre></div></div>
+
+<h2 id="6-프로세스의-자원-이동-순서">6. 프로세스의 자원 이동 순서</h2>
+
+<h3 id="6-1-요청">6-1 요청</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>프로세스는 특정 자원을 사용하기 전에 운영체제에게 자원을 요청한다. ### 6-2 사용
+프로세스가 요청한 자원을 운영체제 할당 하면 자원을 사용한다 ### 6-3 해제
+프로세스는 사용한 자원을 다른 프로세스를 위해서 자원 사용을 해제한다. *** &lt;br&gt;
+
+개인 공부 기록용 블로그입니다. 오류나 틀린 부분이 있을 경우 
+댓글 혹은 메일로 지적해주시면 감사하겠습니다! 😄
+</code></pre></div></div>
+
+<p><a href="#" class="btn btn--primary align-right">맨 위로 이동하기</a></p>
+
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        
+        <p></p>
+        <h4 class="page__meta-title"><span style="font-family:'Coming Soon'; color:#fcd14f;">Data processing</span> <span style="font-family:'Cafe24Oneprettynight';">카테고리 내 다른 글 보러가기</span></h4>
+        <!--
+
+  <nav class="pagination">
+    
+      <a href="/data%20processing/written-test-part3/" class="pagination--pager" title="[ 필기 ] 운영체제의 종류별 특징
+">이전</a>
+    
+    
+      <a href="/data%20processing/written-test-part5/" class="pagination--pager" title="[ 필기 ] 프로세스(Process) Part.2
+">다음</a>
+    
+  </nav>
+
+-->
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  	
+  	
+  	
+  	
+  	
+
+
+  <nav class="pagination_prev_next">
+    
+      <a href="/data%20processing/written-test-part3/" class="pagination_prev_next--pager"><span class="prev_next">이전 글  &nbsp</span>[ 필기 ] 운영체제의 종류별 특징 </a>
+    
+    
+      <a href="/data%20processing/written-test-part5/" class="pagination_prev_next--pager"><span class="prev_next">다음 글  &nbsp  </span>[ 필기 ] 프로세스(Process) Part.2 </a>
+    
+  </nav>
+
+
+<!--
+
+
+
+-->
+
+
+
+        <p></p>
+
+        <!-- archive 중간 광고 -->
+        <ins class="adsbygoogle"
+             style="display:block"
+            data-ad-client="ca-pub-6111782407607310"
+            data-ad-slot="5458515780"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </section>
+      <footer class="page__meta">
+        
+        <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5B+%ED%95%84%EA%B8%B0+%5D+%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%28Process%29+Part.1+%20http%3A%2F%2Flocalhost%3A4000%2Fdata%2520processing%2Fwritten-test-part4%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fdata%2520processing%2Fwritten-test-part4%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fdata%2520processing%2Fwritten-test-part4%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+      </footer>
+    </div>
+
+    
+
+  </article>
+
+  
+  
+    <div class="page__related"> <!--site.data.ui-text[site.locale].related_label-->
+      <h4 class="page__related-title">최근 글 10 개 :)</h4>
+        
+          <div class="list__item">
+    <article class="archive-item">
+        <div>
+            <span>
+              <a href="/data%20processing/written-test-part20/">[ 필기 ] 설계 모델링 </a>
+            </span>
+            <small> 
+              <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2022.02.28
+              <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#data-processing" class="page__taxonomy-item-category" rel="tag">Data processing</a>
+                    
+                    
+                    <a href="/tags/#%EC%84%A4%EA%B3%84-%EB%AA%A8%EB%8D%B8%EB%A7%81" class="page__taxonomy-item-tag" rel="tag">설계 모델링</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#%EC%9E%90%EA%B2%A9%EC%A6%9D" class="page__taxonomy-item-tag" rel="tag">자격증</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EC%82%B0%EC%97%85%EA%B8%B0%EC%82%AC" class="page__taxonomy-item-tag" rel="tag">정보처리산업기사</a>
+                
+            </span>
+        </span>
+            </small>
+        </div>
+      </article>
+</div>
+        
+          <div class="list__item">
+    <article class="archive-item">
+        <div>
+            <span>
+              <a href="/data%20processing/written-test-part19/">[ 필기 ] 통신 시스템의 구성 요소 </a>
+            </span>
+            <small> 
+              <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2022.02.28
+              <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#data-processing" class="page__taxonomy-item-category" rel="tag">Data processing</a>
+                    
+                    
+                    <a href="/tags/#%EC%9E%90%EA%B2%A9%EC%A6%9D" class="page__taxonomy-item-tag" rel="tag">자격증</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EC%82%B0%EC%97%85%EA%B8%B0%EC%82%AC" class="page__taxonomy-item-tag" rel="tag">정보처리산업기사</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#%ED%86%B5%EC%8B%A0-%EC%8B%9C%EC%8A%A4%ED%85%9C" class="page__taxonomy-item-tag" rel="tag">통신 시스템</a>
+                
+            </span>
+        </span>
+            </small>
+        </div>
+      </article>
+</div>
+        
+          <div class="list__item">
+    <article class="archive-item">
+        <div>
+            <span>
+              <a href="/error/bind(2)/"> [ Error ] Rails: Address already in use - bind(2) </a>
+            </span>
+            <small> 
+              <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2022.02.28
+              <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#error" class="page__taxonomy-item-category" rel="tag">Error</a>
+                    
+                    
+                    <a href="/tags/#error" class="page__taxonomy-item-tag" rel="tag">Error</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#github" class="page__taxonomy-item-tag" rel="tag">Github</a>
+                
+            </span>
+        </span>
+            </small>
+        </div>
+      </article>
+</div>
+        
+          <div class="list__item">
+    <article class="archive-item">
+        <div>
+            <span>
+              <a href="/data%20processing/written-test-part18/">[ 필기 ] 정보통신 </a>
+            </span>
+            <small> 
+              <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2022.02.25
+              <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#data-processing" class="page__taxonomy-item-category" rel="tag">Data processing</a>
+                    
+                    
+                    <a href="/tags/#%EC%9E%90%EA%B2%A9%EC%A6%9D" class="page__taxonomy-item-tag" rel="tag">자격증</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EC%82%B0%EC%97%85%EA%B8%B0%EC%82%AC" class="page__taxonomy-item-tag" rel="tag">정보처리산업기사</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0" class="page__taxonomy-item-tag" rel="tag">정보통신</a>
+                
+            </span>
+        </span>
+            </small>
+        </div>
+      </article>
+</div>
+        
+          <div class="list__item">
+    <article class="archive-item">
+        <div>
+            <span>
+              <a href="/data%20processing/written-test-part17/">[ 필기 ] 분산 운영체제 </a>
+            </span>
+            <small> 
+              <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2022.02.24
+              <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#data-processing" class="page__taxonomy-item-category" rel="tag">Data processing</a>
+                    
+                    
+                    <a href="/tags/#%EB%B6%84%EC%82%B0%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C" class="page__taxonomy-item-tag" rel="tag">분산운영체제</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#%EC%9E%90%EA%B2%A9%EC%A6%9D" class="page__taxonomy-item-tag" rel="tag">자격증</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EC%82%B0%EC%97%85%EA%B8%B0%EC%82%AC" class="page__taxonomy-item-tag" rel="tag">정보처리산업기사</a>
+                
+            </span>
+        </span>
+            </small>
+        </div>
+      </article>
+</div>
+        
+          <div class="list__item">
+    <article class="archive-item">
+        <div>
+            <span>
+              <a href="/data%20processing/written-test-part16/">[ 필기 ] 디스크 관리 part.3 </a>
+            </span>
+            <small> 
+              <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2022.02.24
+              <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#data-processing" class="page__taxonomy-item-category" rel="tag">Data processing</a>
+                    
+                    
+                    <a href="/tags/#%EC%9E%90%EA%B2%A9%EC%A6%9D" class="page__taxonomy-item-tag" rel="tag">자격증</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EC%82%B0%EC%97%85%EA%B8%B0%EC%82%AC" class="page__taxonomy-item-tag" rel="tag">정보처리산업기사</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4" class="page__taxonomy-item-tag" rel="tag">프로세스</a>
+                
+            </span>
+        </span>
+            </small>
+        </div>
+      </article>
+</div>
+        
+          <div class="list__item">
+    <article class="archive-item">
+        <div>
+            <span>
+              <a href="/data%20processing/written-test-part15/">[ 필기 ] 디스크 관리 part.2 </a>
+            </span>
+            <small> 
+              <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2022.02.24
+              <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#data-processing" class="page__taxonomy-item-category" rel="tag">Data processing</a>
+                    
+                    
+                    <a href="/tags/#%EB%94%94%EC%8A%A4%ED%81%AC%EA%B4%80%EB%A6%AC" class="page__taxonomy-item-tag" rel="tag">디스크관리</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#%EC%9E%90%EA%B2%A9%EC%A6%9D" class="page__taxonomy-item-tag" rel="tag">자격증</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EC%82%B0%EC%97%85%EA%B8%B0%EC%82%AC" class="page__taxonomy-item-tag" rel="tag">정보처리산업기사</a>
+                
+            </span>
+        </span>
+            </small>
+        </div>
+      </article>
+</div>
+        
+          <div class="list__item">
+    <article class="archive-item">
+        <div>
+            <span>
+              <a href="/data%20processing/written-test-part14/">[ 필기 ] 디스크 관리 part.1 </a>
+            </span>
+            <small> 
+              <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2022.02.24
+              <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#data-processing" class="page__taxonomy-item-category" rel="tag">Data processing</a>
+                    
+                    
+                    <a href="/tags/#%EB%94%94%EC%8A%A4%ED%81%AC%EA%B4%80%EB%A6%AC" class="page__taxonomy-item-tag" rel="tag">디스크관리</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#%EC%9E%90%EA%B2%A9%EC%A6%9D" class="page__taxonomy-item-tag" rel="tag">자격증</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EC%82%B0%EC%97%85%EA%B8%B0%EC%82%AC" class="page__taxonomy-item-tag" rel="tag">정보처리산업기사</a>
+                
+            </span>
+        </span>
+            </small>
+        </div>
+      </article>
+</div>
+        
+          <div class="list__item">
+    <article class="archive-item">
+        <div>
+            <span>
+              <a href="/data%20processing/written-test-part13/">[ 필기 ] 주기억장치 관리 전략 </a>
+            </span>
+            <small> 
+              <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2022.02.24
+              <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#data-processing" class="page__taxonomy-item-category" rel="tag">Data processing</a>
+                    
+                    
+                    <a href="/tags/#%EC%9E%90%EA%B2%A9%EC%A6%9D" class="page__taxonomy-item-tag" rel="tag">자격증</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EC%82%B0%EC%97%85%EA%B8%B0%EC%82%AC" class="page__taxonomy-item-tag" rel="tag">정보처리산업기사</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#%EC%A3%BC%EA%B8%B0%EC%96%B5%EC%9E%A5%EC%B9%98" class="page__taxonomy-item-tag" rel="tag">주기억장치</a>
+                
+            </span>
+        </span>
+            </small>
+        </div>
+      </article>
+</div>
+        
+          <div class="list__item">
+    <article class="archive-item">
+        <div>
+            <span>
+              <a href="/data%20processing/written-test-part12/">[ 필기 ] 가상기억장치 사용 방식 </a>
+            </span>
+            <small> 
+              <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"> </i> 2022.02.24
+              <!--Archive page 용-: (post -> page)-->
+<!--page__taxonomy.html에서 가져 옴-->
+        
+        <span class="page__taxonomy">
+            <span itemprop="keywords"><a href="/categories/#data-processing" class="page__taxonomy-item-category" rel="tag">Data processing</a>
+                    
+                    
+                    <a href="/tags/#%EA%B0%80%EC%83%81%EA%B8%B0%EC%96%B5%EC%9E%A5%EC%B9%98" class="page__taxonomy-item-tag" rel="tag">가상기억장치</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#%EC%9E%90%EA%B2%A9%EC%A6%9D" class="page__taxonomy-item-tag" rel="tag">자격증</a><span class="sep"> </span>
+                
+                    
+                    
+                    <a href="/tags/#%EC%A0%95%EB%B3%B4%EC%B2%98%EB%A6%AC%EC%82%B0%EC%97%85%EA%B8%B0%EC%82%AC" class="page__taxonomy-item-tag" rel="tag">정보처리산업기사</a>
+                
+            </span>
+        </span>
+            </small>
+        </div>
+      </article>
+</div>
+        
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ansohxxn.github.io -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6111782407607310"
+     data-ad-slot="5978510098"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/Sheep1sik" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 공공돌🧸. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    <aside class="sidebar__top">
+      <a href="#site-nav"> <i class="fas fa-angle-double-up fa-2x"></i></a>
+    </aside>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+    <script>
+  'use strict';
+
+  (function() {
+    var commentContainer = document.querySelector('#utterances-comments');
+
+    if (!commentContainer) {
+      return;
+    }
+
+    var script = document.createElement('script');
+    script.setAttribute('src', 'https://utteranc.es/client.js');
+    script.setAttribute('repo', 'Sheep1sik/comments');
+    script.setAttribute('issue-term', 'pathname');
+    script.setAttribute('theme', 'photon-dark');
+    script.setAttribute('crossorigin', 'anonymous');
+
+    commentContainer.appendChild(script);
+  })();
+</script>
+
+  
+
+
+
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" defer
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+
+  </body>
+</html>
