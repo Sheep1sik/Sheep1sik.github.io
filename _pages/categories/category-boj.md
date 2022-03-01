@@ -1,7 +1,7 @@
 ---
-title: "백준 알고리즘 사이트 문제 풀이"
+title: "백준 알고리즘 문제 풀이"
 layout: archive
-permalink: categories/boj
+permalink: categories/BOJ
 author_profile: true
 sidebar_main: true
 ---
@@ -10,7 +10,6 @@ sidebar_main: true
 
 ***
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=ansohxxn&repo=coding-test)](https://github.com/ansohxxn/coding-test)
 
 {% assign posts = site.categories.BOJ %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}
