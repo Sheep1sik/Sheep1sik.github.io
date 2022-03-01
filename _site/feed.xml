@@ -1,4 +1,75 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-28T01:51:14+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html"> 공공돌 블로그 </title><subtitle>공부 &amp; 취미 블로그</subtitle><author><name>공부하는 공돌이📖</name></author><entry><title type="html">[ 필기 ] 설계 모델링</title><link href="http://localhost:4000/data%20processing/written-test-part20/" rel="alternate" type="text/html" title="[ 필기 ] 설계 모델링" /><published>2022-02-28T00:00:00+09:00</published><updated>2022-02-28T00:00:00+09:00</updated><id>http://localhost:4000/data%20processing/written-test-part20</id><content type="html" xml:base="http://localhost:4000/data%20processing/written-test-part20/">&lt;p&gt;강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-01T17:20:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html"> 공공돌 블로그 </title><subtitle>공부 &amp; 취미 블로그</subtitle><author><name>공부하는 공돌이📖</name></author><entry><title type="html">[11047번] : 동전0</title><link href="http://localhost:4000/boj/11047/" rel="alternate" type="text/html" title="[11047번] : 동전0" /><published>2022-03-01T00:00:00+09:00</published><updated>2022-03-01T00:00:00+09:00</updated><id>http://localhost:4000/boj/11047</id><content type="html" xml:base="http://localhost:4000/boj/11047/">&lt;hr /&gt;
+
+&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+
+&lt;p&gt;준규가 가지고 있는 동전은 총 N종류이고, 각각의 동전을 매우 많이 가지고 있다.&lt;/p&gt;
+
+&lt;p&gt;동전을 적절히 사용해서 그 가치의 합을 K로 만들려고 한다. 이때 필요한 동전 개수의 최솟값을 구하는 프로그램을 작성하시오.&lt;/p&gt;
+
+&lt;h2 id=&quot;입력&quot;&gt;입력&lt;/h2&gt;
+
+&lt;p&gt;첫째 줄에 N과 K가 주어진다. (1 ≤ N ≤ 10, 1 ≤ K ≤ 100,000,000)&lt;/p&gt;
+
+&lt;p&gt;둘째 줄부터 N개의 줄에 동전의 가치 Ai가 오름차순으로 주어진다. (1 ≤ Ai ≤ 1,000,000, A1 = 1, i ≥ 2인 경우에 Ai는 Ai-1의 배수)&lt;/p&gt;
+
+&lt;h2 id=&quot;출력&quot;&gt;출력&lt;/h2&gt;
+&lt;p&gt;첫째 줄에 K원을 만드는데 필요한 동전 개수의 최솟값을 출력한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;예제-입력-1&quot;&gt;예제 입력 1&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;10 4200
+1
+5
+10
+50
+100
+500
+1000
+5000
+10000
+50000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;예제-출력-1&quot;&gt;예제 출력 1&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;예제-입력-2&quot;&gt;예제 입력 2&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;10 4790
+1
+5
+10
+50
+100
+500
+1000
+5000
+10000
+50000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;예제-출력-2&quot;&gt;예제 출력 2&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;12
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;해설-및-소스코드&quot;&gt;해설 및 소스코드&lt;/h2&gt;
+
+&lt;p&gt;이 문제는 그리디 알고리즘 문제이다.&lt;br /&gt;
+그리디 알고리즘(욕심쟁이 알고리즘, Greedy Algorithm)이란 “매 선택에서 지금 이 순간 당장 최적인 답을 선택하여 적합한 결과를 도출하자” 라는 모토를 가지는 알고리즘 설계 기법이다.&lt;/p&gt;
+
+&lt;p&gt;위에 “예제 입력 1” 같은 경우를 보면 4200원이 있고 동전을 최대한 적게 나누어 떨어지게 받으려면 1000 * 4 , 100 * 2 로 6개 이다.&lt;br /&gt;
+나 같은 경우 0부터 n-1까지 벡터에 받고 Algorithm의 Sort 함수에서 내림차순으로 재 정렬을 해주었다. &lt;br /&gt;
+그리고 While 문을 통해 K - v[i] &amp;gt;= 0 이 참이면, ans++ , K -= v[i]를 실행하게 만들었다.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/Sheep1sik/a67eee01d392ce1e2b792296a8c9f2b4.js&quot;&gt;&lt;/script&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;개인 공부 기록용 블로그입니다. 오류나 틀린 부분이 있을 경우 
+댓글 혹은 메일로 지적해주시면 감사하겠습니다! 😄
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="BOJ" /><category term="Cpp" /><category term="BOJ" /><category term="Algorithm" /><summary type="html"></summary></entry><entry><title type="html">[ 필기 ] 설계 모델링</title><link href="http://localhost:4000/data%20processing/written-test-part20/" rel="alternate" type="text/html" title="[ 필기 ] 설계 모델링" /><published>2022-02-28T00:00:00+09:00</published><updated>2022-02-28T00:00:00+09:00</updated><id>http://localhost:4000/data%20processing/written-test-part20</id><content type="html" xml:base="http://localhost:4000/data%20processing/written-test-part20/">&lt;p&gt;강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -141,7 +212,45 @@
 댓글 혹은 메일로 지적해주시면 감사하겠습니다! 😄
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Data processing" /><category term="통신 시스템" /><category term="정보처리산업기사" /><category term="자격증" /><summary type="html">강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.</summary></entry><entry><title type="html">[ Error ] Rails: Address already in use - bind(2)</title><link href="http://localhost:4000/error/bind(2)/" rel="alternate" type="text/html" title="[ Error ] Rails: Address already in use - bind(2)" /><published>2022-02-28T00:00:00+09:00</published><updated>2022-02-28T00:00:00+09:00</updated><id>http://localhost:4000/error/bind(2)</id><content type="html" xml:base="http://localhost:4000/error/bind(2)/">&lt;p&gt;📝 Rails: 이미 사용 중인 주소 - bind(2) 해결방법&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Data processing" /><category term="통신 시스템" /><category term="정보처리산업기사" /><category term="자격증" /><summary type="html">강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.</summary></entry><entry><title type="html">[ Error ] 깃허브 포스트 게시 안됨 해결</title><link href="http://localhost:4000/error/post_error/" rel="alternate" type="text/html" title="[ Error ] 깃허브 포스트 게시 안됨 해결" /><published>2022-02-28T00:00:00+09:00</published><updated>2022-03-01T00:00:00+09:00</updated><id>http://localhost:4000/error/post_error</id><content type="html" xml:base="http://localhost:4000/error/post_error/">&lt;p&gt;📝 깃허브 포스트 게시 안됨 해결&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;해결-방법&quot;&gt;해결 방법&lt;/h2&gt;
+
+&lt;p&gt;여기 아래 내용들은 기본적으로 지켜야 할 것들이다. 확인해보자.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;YEAR-MONTH-DAY-title.md 파일 제목 형식을 확인한다.&lt;/li&gt;
+  &lt;li&gt;포스팅 날짜 맞게 입력했는지 확인한다.&lt;/li&gt;
+  &lt;li&gt;_post 폴더에 맞게 위치해 있는지 확인한다.&lt;/li&gt;
+  &lt;li&gt;카테고리 맞게 입력 했는지, 해당 카테고리 존재하는지 확인해본다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;만약 위 내용에서의 문제가 없다면 아래 내용을 시도해보자.
+나 같은 경우 1번과 2번을 추가해 성공했다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;_config.yml에 futrue: true 추가&lt;/li&gt;
+  &lt;li&gt;페이지 옵션(타이틀, 카테고리 적는곳)에 published: true 추가&lt;/li&gt;
+  &lt;li&gt;index.html에 공백이라도 추가해 변경사항 만들고 push&lt;/li&gt;
+  &lt;li&gt;jekyll build –verbose 로 Skipping 된 것 있나 확인&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;해결&quot;&gt;해결&lt;/h2&gt;
+
+&lt;p&gt;&lt;img width=&quot;330&quot; alt=&quot;image&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155959709-0339f660-af67-497d-973f-9ab3f6f71554.png&quot; /&gt;
+&lt;br /&gt;
+&lt;img width=&quot;426&quot; alt=&quot;image&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155959817-44b4924b-aa32-46d6-8ece-b8992b76f6ae.png&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;개인 공부 기록용 블로그입니다. 오류나 틀린 부분이 있을 경우 
+댓글 혹은 메일로 지적해주시면 감사하겠습니다! 😄
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Error" /><category term="Github" /><category term="Error" /><summary type="html">📝 깃허브 포스트 게시 안됨 해결</summary></entry><entry><title type="html">[ Error ] Rails: Address already in use - bind(2)</title><link href="http://localhost:4000/error/bind(2)/" rel="alternate" type="text/html" title="[ Error ] Rails: Address already in use - bind(2)" /><published>2022-02-28T00:00:00+09:00</published><updated>2022-02-28T00:00:00+09:00</updated><id>http://localhost:4000/error/bind(2)</id><content type="html" xml:base="http://localhost:4000/error/bind(2)/">&lt;p&gt;📝 Rails: 이미 사용 중인 주소 - bind(2) 해결방법&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;h2 id=&quot;오류-내용&quot;&gt;오류 내용&lt;/h2&gt;
@@ -236,342 +345,7 @@ kill -9 PID번호 (나 같은 경우는 5385)
 댓글 혹은 메일로 지적해주시면 감사하겠습니다! 😄
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Data processing" /><category term="정보통신" /><category term="정보처리산업기사" /><category term="자격증" /><summary type="html">강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.</summary></entry><entry><title type="html">[ 필기 ] 디스크 관리 part.2</title><link href="http://localhost:4000/data%20processing/written-test-part15/" rel="alternate" type="text/html" title="[ 필기 ] 디스크 관리 part.2" /><published>2022-02-24T00:00:00+09:00</published><updated>2022-02-24T00:00:00+09:00</updated><id>http://localhost:4000/data%20processing/written-test-part15</id><content type="html" xml:base="http://localhost:4000/data%20processing/written-test-part15/">&lt;p&gt;강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;h2 id=&quot;1-fcfsfifo&quot;&gt;1. FCFS(FIFO)&lt;/h2&gt;
-
-&lt;h3 id=&quot;1-1-fcfs의-특징&quot;&gt;1-1 FCFS의 특징&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;도착 순서에 따라 실행 순서가 고정된다는 점에서 공평하다.
-요청한 순서대로 진행하기 때문에 순서가 바뀌는 일이 없다.
-디스크의 부하가 적을 때 유리하다.
-디스크의 부하가 커지면 응답시간이 길어진다.
-탐색(Seek time)을 최적화하려는 시도가 없다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;1-2-fcfs-스케줄링-방식&quot;&gt;1-2 FCFS 스케줄링 방식&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0 ~ 199번의 200개 트랙, FCFS 디스크 스케줄링 방식, 트랙 50번
-요청 큐 : 99 , 182, 35, 121, 12, 125, 64, 66
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img width=&quot;663&quot; alt=&quot;Pasted Graphic 23&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155455138-a7d8f0a5-0c7b-4f3b-982c-eb9f91659c0e.png&quot; /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;2--sstf&quot;&gt;2.  SSTF&lt;/h2&gt;
-
-&lt;h3 id=&quot;2-1-sstf의-특징&quot;&gt;2-1 SSTF의 특징&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;대기 큐에 먼저 들어와 있지 않더라도 탐색 거리가 짧으면 먼저 서비스 받는다.
-디스크 스케줄링 기법 중 현재 헤등 ㅟ치에서 가장 가까운 요청을 우선적으로 처리하는 기법이다.
-가운데 트랙이 안쪽이나 바깥쪽보다 서비스 받을 확률이 높다.
-헤드에서 멀리 떨어진 요청은 기아 상태(Starvation State)가 발생할 수 있다.
-FCFS보다 처리량이 많고 평균 응답시간이 짧다.
-처리량이 많기 때문에 일괄처리에는 유용하다.
-응답시간의 편차가 크기 때문에 대화형 시스템에는 부적합하다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;2-2-sstf-스케줄링-방식&quot;&gt;2-2 SSTF 스케줄링 방식&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0 ~ 199번의 200개 트랙, FCFS 디스크 스케줄링 방식, 트랙 50번
-요청 큐 : 99 , 182, 35, 121, 12, 125, 64, 66 &amp;lt;img width=&quot;688&quot; alt=&quot;121125 182&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155455143-d7669892-cf27-4837-8e42-8b3345b4f8ea.png&quot;&amp;gt; &amp;lt;br&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;3-scan&quot;&gt;3. SCAN&lt;/h2&gt;
-
-&lt;h3 id=&quot;3-1-scan의-특징&quot;&gt;3-1 SCAN의 특징&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SSTF의 응답시간의 편차를 개선한 기법이다.
-진행 방향상의 가장 짧은 거리에 있는 요청을 먼저 수행한다.
-진행 방향으로 끝까지 진행한다.
-SSTF에 발생하는 안쪽과 바깥쪽의 차별대우를 최소화하고 응답 시간의 편차를 줄인다.
-대부분의 디스크 스케줄링 전략의 기본이 된다.
-부하가 적은 경우에는 SCAN 기법이 가장 좋은 결과를 가진다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;3-2-scan-스케줄링-방식&quot;&gt;3-2 SCAN 스케줄링 방식&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0 ~ 199번의 200개 트랙, FCFS 디스크 스케줄링 방식, 트랙 50번
-진행방향 : 안쪽에서 바깥쪽으로
-요청 큐 : 99 , 182, 35, 121, 12, 125, 64, 66 &amp;lt;img width=&quot;691&quot; alt=&quot;Pasted Graphic 25&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155455149-d004c238-36db-4d47-bd47-f67390a0f8ac.png&quot;&amp;gt; &amp;lt;br&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;4-c-scan&quot;&gt;4. C-SCAN&lt;/h2&gt;
-
-&lt;h3 id=&quot;4-1-c-scan의-특징&quot;&gt;4-1 C-SCAN의 특징&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;안쪽과 바깥쪽의 차별 대우를 모두 없앴다.
-항상 바깥쪽에서 안쪽으로 이동하면서 서비스한다.
-안쪽 방향으로 끝까지 진행한다.
-응답시간의 편차가 매우 작다.
-부하가 많은 경우에는 C-SCAN 기법이 가장 좋은 결과를 가진다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;4-2-c_scan-스케줄링-방식&quot;&gt;4-2 C_SCAN 스케줄링 방식&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0 ~ 199번의 200개 트랙, FCFS 디스크 스케줄링 방식, 트랙 50번
-진행방향 : 바깥쪽으로 안쪽으로 고정
-요청 큐 : 99 , 182, 35, 121, 12, 125, 64, 66 &amp;lt;img width=&quot;660&quot; alt=&quot;121125 182 199&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155455155-3fd3bffe-b408-47f6-9bde-e822dc6cc39f.png&quot;&amp;gt; &amp;lt;br&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;개인 공부 기록용 블로그입니다. 오류나 틀린 부분이 있을 경우 
-댓글 혹은 메일로 지적해주시면 감사하겠습니다! 😄
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Data processing" /><category term="디스크관리" /><category term="정보처리산업기사" /><category term="자격증" /><summary type="html">강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.</summary></entry><entry><title type="html">[ 필기 ] 디스크 관리 part.1</title><link href="http://localhost:4000/data%20processing/written-test-part14/" rel="alternate" type="text/html" title="[ 필기 ] 디스크 관리 part.1" /><published>2022-02-24T00:00:00+09:00</published><updated>2022-02-24T00:00:00+09:00</updated><id>http://localhost:4000/data%20processing/written-test-part14</id><content type="html" xml:base="http://localhost:4000/data%20processing/written-test-part14/">&lt;p&gt;강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;img width=&quot;654&quot; alt=&quot;(Access Arm)&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155454812-20216680-0c97-4f60-9d68-20ac356e2153.png&quot; /&gt;
-&lt;br /&gt;&lt;/p&gt;
-&lt;h2 id=&quot;1-디스크-구조&quot;&gt;1. 디스크 구조&lt;/h2&gt;
-
-&lt;h3 id=&quot;트랙track&quot;&gt;트랙(Track)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;디스크의 회전축을 중심으로 동심원 모양으로 디스크의 종류마다 개수가 모두 다르다.
-일반적으로 200트랙(0 ~ 199 트랙)이다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;섹터sector&quot;&gt;섹터(Sector)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;하나의 트랙을 몇 개로 분할한 블록으로 한 개의 섹터는 일반적으로 512byte ~ 1024byte 용량을 갖는다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;iplinitial-program-loader&quot;&gt;IPL(Initial Program Loader)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;디스크를 접근할 때 디스크의 물리적인 정보를 제공한다.
-일반적으로 부트(Boot) 섹터라고 한다.
-물리적인 정보는 트랙수, 섹터수, 섹터당 byte 수 등이다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;fatfile-allocation-table&quot;&gt;FAT(File Allocation Table)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;효율적인 저장을 위해서 여러개의 복사본을 가지고 있다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;디렉토리directory&quot;&gt;디렉토리(Directory)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;디스크에 저장된 파일의 기본적인 정보를 수록하는 공간으로 파일명, 파일 속성, 작성 날짜, 작성 시간, 파일 위치, 파일의 크기 등의 정보를 갖는다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;실린더cylinder&quot;&gt;실린더(Cylinder)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;회전축을 중심으로 같은 거리에 있는 트랙들의 집합이다.
-하드디스크처럼 여러개의 디스크 판을 사용할 때 사용하는 단어로 플로피 디스크처럼 한 장을 사용할 경우에는 트랙과 같은 말이다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;2-드라이브&quot;&gt;2. 드라이브&lt;/h2&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;디스크를 감싸고 있는 부분이다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;액세스-암-access-arm&quot;&gt;액세스 암 (Access Arm)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;읽기/쓰기 헤드를 움직여주는 막대
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;고정-축-boom&quot;&gt;고정 축 (Boom)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;액세스 암들을 동시에 이동시키는 막대로 탐색시간(Seek time)은 고정축의 이동시간이 된다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;헤드-head&quot;&gt;헤드 (Head)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;데이터를 읽어 내거나 기록하는 장치
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;3-디스크-접근시간&quot;&gt;3. 디스크 접근시간&lt;/h2&gt;
-
-&lt;h3 id=&quot;탐색시간seek-time&quot;&gt;탐색시간(Seek Time)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;디스크 상의 원하는 데이터를 액세스하기 위해 트랙 또는 실린더에 헤드를 위치시키는데 걸리는 시간
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;회전-지연-시간latency-time&quot;&gt;회전 지연 시간(Latency Time)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;지정된 트랙에 위치한 헤드가 원하는 섹터에 위치시키는데 걸리는 시간으로 Rotational Delay Time 또는 RPM 지연 시간이라고도 한다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;전송-시간transmission-time&quot;&gt;전송 시간(Transmission Time)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;디스크로부터 주기억장치로 데이터가 이동하는 시간이다.
-
-검색 시간 (Search time) = 탐색시간 + 회전 지연 시간
-접근 시간(Access time) = 전송 시간 + 대기 시간(Waiting time)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;4-디스크-스케줄링-전략의-목적&quot;&gt;4. 디스크 스케줄링 전략의 목적&lt;/h2&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;처리량을 최대화한다.
-응답시간을 최소화한다.
-응답시간의 편차를 최소화한다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;개인 공부 기록용 블로그입니다. 오류나 틀린 부분이 있을 경우 
-댓글 혹은 메일로 지적해주시면 감사하겠습니다! 😄
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Data processing" /><category term="디스크관리" /><category term="정보처리산업기사" /><category term="자격증" /><summary type="html">강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.</summary></entry><entry><title type="html">[ 필기 ] 주기억장치 관리 전략</title><link href="http://localhost:4000/data%20processing/written-test-part13/" rel="alternate" type="text/html" title="[ 필기 ] 주기억장치 관리 전략" /><published>2022-02-24T00:00:00+09:00</published><updated>2022-02-24T00:00:00+09:00</updated><id>http://localhost:4000/data%20processing/written-test-part13</id><content type="html" xml:base="http://localhost:4000/data%20processing/written-test-part13/">&lt;p&gt;강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;h2 id=&quot;1-반입fetch-전략&quot;&gt;1. 반입(Fetch) 전략&lt;/h2&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;프로그램/데이터를 주기억장치로 가져오는 시기(When)를 결정하는 전략
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;요구-반입demand-fetch&quot;&gt;요구 반입(Demand fetch)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;요구 반입 기법은 새로 반입된 데이터나 프로그램을 주기억장치의 언제 위치시킬 것인가를 결정하는 방법이다. ### 예상 반입(Anticipatory fetch)
-앞으로 요구될 가능성이 큰 데이터 또는 프로그램을 예상하여 주기억장치로 미리 옮기는 방법이다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;2-배치placement-전략&quot;&gt;2. 배치(Placement) 전략&lt;/h2&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;프로그램/데이터의 주기억장치 내의 위치(Where)를 정하는 전략이다.
-최초적합, 최적적합, 최악적합이 있다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;최초-적합first-fit&quot;&gt;최초 적합(First Fit)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;입력된 작업을 주기억장치 내에서 그 작업을 수용할 수 있는 첫 번째 공백에 배치한다.
-초기 결정력이 가장 빠르다.
-운영체제 다음부터가 시작점이다.
-처음부터 순차적으로 검색하여 적재될 수 있는 공백이면 배치한다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;최적-적합best-fit&quot;&gt;최적 적합(Best Fit)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;입력된 작업을 주기억장치 내의 공백 중에서 그 작업에 가장 잘 맞는 공백에 배치한다.
-내부 단편화가 가장 작거나 없는 공백에 배치한다.
-가장 잘 맞는 공백을 찾아야 하므로 결정력이 느리다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;최악-적합worst-fit&quot;&gt;최악 적합(Worst Fit)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;입력된 작업을 주기억장치 내에서 가장 잘 맞지 않는 공백,
-즉 가장 큰 공백에 배치한다.
-내부 단편화가 가장 큰 공백에 배치한다.
-가장 잘 맞지 않는 공백을 찾아야 하므로 결정력이 느리다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;3-교체replacement-전략-페이지-교체-알고리즘&quot;&gt;3. 교체(Replacement) 전략( 페이지 교체 알고리즘)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;당장 필요한 페이지와 교체할 페이지를 선택하는 전략이다.
-
-주기억장치에 적재된 페이지들을 대상으로 새롭게 적재될 페이지와 교체할 페이지를 선택하는 전략이다.
-당장 적재할 페이지가 주기억장치내의 페이지 프레임에 있으면 성공(Hit) 되었다고 한다.
-당장 적재할 페이지가 주기억장치내의 페이지 프레임에 없으면 실패 혹은 페이지 부재(Page Fault)되었다고 한다.
-페이지 적중률(Hit Ratio)이 높도록 교체 전략을 선택해야 한다.
-페이지 적중률 = 성공수 / 페이지 참조 수
-효율적인 교체 전략은 프로그램의 실행속도를 향상시킨다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;3-1-교체-전략의-종류&quot;&gt;3-1 교체 전략의 종류&lt;/h3&gt;
-
-&lt;h4 id=&quot;최적화&quot;&gt;최적화&lt;/h4&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;앞으로 가장 오랫동안 사용되지 않을 페이지와 교체한다.
-앞으로 사용할 페이지를 미리 확인하여 교체하는 방법이다.
-실제 알고리즘에서는 미리 확인할 수 없다.
-Belady의 알고리즘으로 가장 이상적이지만 실현가능성이 희박하다.
-페이지 부재(Page Fault) 횟수가 가장 적으므로 페이지 적중률이 가장 크다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img width=&quot;607&quot; alt=&quot;Pasted Graphic 17&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155454290-9c39b9c4-2c3c-48fd-934f-dcc17b49e01f.png&quot; /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;fifo&quot;&gt;FIFO&lt;/h4&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;주기억장치 내에 가장 오래 있던 페이지와 교체한다.
-각 페이지가 주기억장치에 적재될 때마다 그때의 시간을 기억시켜 두고, 주기억장치 내에 가장 오래 있던 페이지를 교체한다.
-알고리즘이 가장 간단하다.
-페이지 부재가 가장 많이 발생한다.
-
-Belady 모순 : 프로세스에 할당된 페이지 프레임 수가 증가하면서 페이지 부재의 수가 감소하는 것이 당연하지만
-페이지 프레임 수가 증가할 때, 현실적으로 페이지 부재가 더 증가하는 모순(Anomaly) 현상이 발생한다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img width=&quot;616&quot; alt=&quot;Pasted Graphic 18&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155454413-7598a40c-bbb7-4e8a-9873-ea8420b1f874.png&quot; /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;lru&quot;&gt;LRU&lt;/h4&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;사용(참조된)한 지 가장 오래된 페이지를 대상으로 교체한다.
-현시점에서 가장 오랫동안 사용하지 않은 페이지와 교체한다.
-각 페이지마다 계수기(시간 기억 영역)를 두어 사용하는 기법
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img width=&quot;598&quot; alt=&quot;Pasted Graphic 19&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155454423-1d0504c8-c724-4d04-aa21-9497854ffd04.png&quot; /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;lfu&quot;&gt;LFU&lt;/h4&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;사용(참조된)한 횟수가 가장 적은 페이지와 교체한다.
-사용한 횟수를 기억할만한 참조변수를 각 페이지마다 갖게 하여 사용할 때마다 1씩 증가한다.	 &amp;lt;img width=&quot;703&quot; alt=&quot;Pasted Graphic 20&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155454436-93ebde6b-c78f-4833-b8a2-02da433e61dc.png&quot;&amp;gt; &amp;lt;br&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;nur&quot;&gt;NUR&lt;/h4&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;최근에 호출하지도 사용하지도 않은 페이지를 제거한다.
-두 개의 하드웨어 비트인 참조 비트(Referenced Bit)와 변형 비트(Modified Bit)를 사용한다.
-참조 비트가 0이면 오래전에 호출, 1이면 최근에 호출한 것이다.
-변형 비트가 0이면 오래전에 사용, 1이면 최근에 사용한 것이다.
-참조 비트와 변형 비트는 주기적으로 갱신된다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img width=&quot;512&quot; alt=&quot;Pasted Graphic 21&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155454443-0d9fb76a-8eb9-4ad6-89f8-bb085299d8b7.png&quot; /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;second-chance이차-기회&quot;&gt;Second Chance(이차 기회)&lt;/h4&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;가장 오래된 페이지가 최근에 사용할 가능성이 높을 것이라는 가정 하에
-가장 오래된 페이지는 교체 대상에서 제외하고 사용한 것으로 취급한다.
-각 페이지의 프레임을 FIFO 순으로 유지시키면서 LRU와 근사 알고리즘처럼 참조 변수를 갖게 한다.
-FIFO의 2차 기회부여 방식이다. 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;pff&quot;&gt;PFF&lt;/h4&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;워킹 셋에 존재하는 페이지들을 관찰하여 최근에 자주 사용되고 있지 않은 페이지와 워킹 셋에 속하지 않은 페이지 중에
-최근에 자주 사용하는 페이지와 교체한다. *** &amp;lt;br&amp;gt;
-
-개인 공부 기록용 블로그입니다. 오류나 틀린 부분이 있을 경우 
-댓글 혹은 메일로 지적해주시면 감사하겠습니다! 😄
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Data processing" /><category term="주기억장치" /><category term="정보처리산업기사" /><category term="자격증" /><summary type="html">강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.</summary></entry><entry><title type="html">[ 필기 ] 기억 장치의 계층과 사용 방식</title><link href="http://localhost:4000/data%20processing/written-test-part10/" rel="alternate" type="text/html" title="[ 필기 ] 기억 장치의 계층과 사용 방식" /><published>2022-02-24T00:00:00+09:00</published><updated>2022-02-24T00:00:00+09:00</updated><id>http://localhost:4000/data%20processing/written-test-part10</id><content type="html" xml:base="http://localhost:4000/data%20processing/written-test-part10/">&lt;p&gt;강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;img width=&quot;522&quot; alt=&quot;Pasted Graphic 1&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155452489-73860b58-e48d-46ab-a089-73792c265afe.png&quot; /&gt;
-&lt;br /&gt;&lt;/p&gt;
-&lt;h2 id=&quot;1-기억장치-사용-방식&quot;&gt;1. 기억장치 사용 방식&lt;/h2&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CPU는 보조기억장치를 직접 접근할 수 없기 때문에 운영체제는 보조기억장치에 저장된 프로그램을 주기억장치에 적재하여 CPU가 실행할 수 있도록 한다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img width=&quot;495&quot; alt=&quot;Pasted Graphic 3&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155452497-d86fab1a-0850-4763-899e-1eb5319f5f56.png&quot; /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;주기억장치의 크기는 제한되어 있으므로 운영체제는 하나 또는 여러 개의 프로그램을 어떻게 주기억장치에 적재할 것인가를 고민해야 한다.
-초기에 운영체제는 주기억장치에 적재할 프로그램 파일의 크기도 주기억장치 보다 작았고, 하나의 프로그램만을 적재하여 사용하였기 때문에 특별한 기술이 필요하지 않았다.
-프로그램이 주기억장치보다 큰 경우에는 프로그램 파일을 주기억장치 크기만큼으로 분할하여 순차적으로 적재하여 실행시키는 방법을 사용했다.
-이 방법을 오버레이(Overlay) 라고 한다.
-운영체제 입장에서는 CPU가 하나의 프로그램을 실행한다는 것은 CPU 이용률이 너무 낮으므로 동시에 여러 개의 프로그램을 적재하여 CPU 이용률을 극대화하기를 원했다.
-이러한 이유로 운영체제는 주기억장치를 분할하여 여러 개의 프로그램을 적재하였고, 주기억장치보다 큰 프로그램을 실행하기 위해서는 보조기억장치를 주기억장치처럼 사용하는 가상기억장치 기술을 개발하여 현재까지 사용하고 있다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;2-기억장치-사용-방식의-분류&quot;&gt;2. 기억장치 사용 방식의 분류&lt;/h2&gt;
-&lt;p&gt;&lt;img width=&quot;620&quot; alt=&quot;Pasted Graphic 5&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155452500-0c5c147c-8247-47ab-9187-1207bb9049be.png&quot; /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;주기억장치 - 단일프로그래밍
-	하나의 프로그램을 주기억장치에 적재하여 운영하는 방식이다.
-주기억장치 - 다중프로그래밍
-	여러 개의 프로그램을 주기억장치에 적재하여 운영하는 방식으로 주기억장치의 분할이 필요하다.
-보조기억장치 - 단일프로그래밍
-	하나의 프로그램을 적재하여 사용하지 않으므로 의미가 없다.
-보조기억장치 - 다중프로그래밍
-	보조기억장치를 주기억장치처럼 사용하여 여러 개의 프로그램을 주기억장치에 적재하여 운영하는 방식으로 보조기억장치에
-	있는 프로그램 파일의 분할이 필요하다
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;3-기억장치-계층-간의-관련-기술&quot;&gt;3. 기억장치 계층 간의 관련 기술&lt;/h2&gt;
-
-&lt;h3 id=&quot;가상기억장치-virtual-memory&quot;&gt;가상기억장치 (Virtual Memory)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;보조기억장치인 하드디스크 일부를 주기억장치처럼 사용하는 기술이다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;가상-디스크-virtual-disk&quot;&gt;가상 디스크 (Virtual Disk)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;주기억장치 일부를 보조기억장치인 하드디스크처럼 사용하는 기술이다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;인터리빙-interleaving&quot;&gt;인터리빙 (Interleaving)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;효율적인 주기억장치의 접근을 위하여 주기억장치를 독립된 기억장치 모듈로 나누어 동시에 주기억장치 모듈에 접근할 수 있도록 하는 방법이다.
-메모리 인터리빙은 단위시간에 여러 메모리에 동시 접근이 가능하도록 하여 메모리의 대역폭을 높이기 위한 구조이다
-즉, 인터리빙은 주기억장치의 액세스 속도를 빠르게 한다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;사이클-스털링-cycle-stealing&quot;&gt;사이클 스털링( Cycle Stealing)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;중앙처리장치(CPU)가 입출력 전용 프로세서인 채널(Channel)에게 주기억장치의 접근을 양보하여 입출력의 효율을 높이기 위한 방법이다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;개인 공부 기록용 블로그입니다. 오류나 틀린 부분이 있을 경우 
-댓글 혹은 메일로 지적해주시면 감사하겠습니다! 😄
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Data processing" /><category term="기억장치" /><category term="정보처리산업기사" /><category term="자격증" /><summary type="html">강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.</summary></entry><entry><title type="html">[ 필기 ] 주기억장치 사용 방식</title><link href="http://localhost:4000/data%20processing/written-test-part11/" rel="alternate" type="text/html" title="[ 필기 ] 주기억장치 사용 방식" /><published>2022-02-24T00:00:00+09:00</published><updated>2022-02-24T00:00:00+09:00</updated><id>http://localhost:4000/data%20processing/written-test-part11</id><content type="html" xml:base="http://localhost:4000/data%20processing/written-test-part11/">&lt;p&gt;강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Data processing" /><category term="정보통신" /><category term="정보처리산업기사" /><category term="자격증" /><summary type="html">강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.</summary></entry><entry><title type="html">[ 필기 ] 주기억장치 사용 방식</title><link href="http://localhost:4000/data%20processing/written-test-part11/" rel="alternate" type="text/html" title="[ 필기 ] 주기억장치 사용 방식" /><published>2022-02-24T00:00:00+09:00</published><updated>2022-02-24T00:00:00+09:00</updated><id>http://localhost:4000/data%20processing/written-test-part11</id><content type="html" xml:base="http://localhost:4000/data%20processing/written-test-part11/">&lt;p&gt;강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;p&gt;&lt;img width=&quot;583&quot; alt=&quot;Pasted Graphic 6&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155453043-1515df6e-10fc-4f52-a537-3e09ee05dbc1.png&quot; /&gt;
@@ -736,4 +510,199 @@ FIFO의 2차 기회부여 방식이다.
 댓글 혹은 메일로 지적해주시면 감사하겠습니다! 😄
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Data processing" /><category term="가상기억장치" /><category term="정보처리산업기사" /><category term="자격증" /><summary type="html">강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Data processing" /><category term="가상기억장치" /><category term="정보처리산업기사" /><category term="자격증" /><summary type="html">강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.</summary></entry><entry><title type="html">[ 필기 ] 주기억장치 관리 전략</title><link href="http://localhost:4000/data%20processing/written-test-part13/" rel="alternate" type="text/html" title="[ 필기 ] 주기억장치 관리 전략" /><published>2022-02-24T00:00:00+09:00</published><updated>2022-02-24T00:00:00+09:00</updated><id>http://localhost:4000/data%20processing/written-test-part13</id><content type="html" xml:base="http://localhost:4000/data%20processing/written-test-part13/">&lt;p&gt;강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;1-반입fetch-전략&quot;&gt;1. 반입(Fetch) 전략&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;프로그램/데이터를 주기억장치로 가져오는 시기(When)를 결정하는 전략
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;요구-반입demand-fetch&quot;&gt;요구 반입(Demand fetch)&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;요구 반입 기법은 새로 반입된 데이터나 프로그램을 주기억장치의 언제 위치시킬 것인가를 결정하는 방법이다. ### 예상 반입(Anticipatory fetch)
+앞으로 요구될 가능성이 큰 데이터 또는 프로그램을 예상하여 주기억장치로 미리 옮기는 방법이다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;2-배치placement-전략&quot;&gt;2. 배치(Placement) 전략&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;프로그램/데이터의 주기억장치 내의 위치(Where)를 정하는 전략이다.
+최초적합, 최적적합, 최악적합이 있다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;최초-적합first-fit&quot;&gt;최초 적합(First Fit)&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;입력된 작업을 주기억장치 내에서 그 작업을 수용할 수 있는 첫 번째 공백에 배치한다.
+초기 결정력이 가장 빠르다.
+운영체제 다음부터가 시작점이다.
+처음부터 순차적으로 검색하여 적재될 수 있는 공백이면 배치한다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;최적-적합best-fit&quot;&gt;최적 적합(Best Fit)&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;입력된 작업을 주기억장치 내의 공백 중에서 그 작업에 가장 잘 맞는 공백에 배치한다.
+내부 단편화가 가장 작거나 없는 공백에 배치한다.
+가장 잘 맞는 공백을 찾아야 하므로 결정력이 느리다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;최악-적합worst-fit&quot;&gt;최악 적합(Worst Fit)&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;입력된 작업을 주기억장치 내에서 가장 잘 맞지 않는 공백,
+즉 가장 큰 공백에 배치한다.
+내부 단편화가 가장 큰 공백에 배치한다.
+가장 잘 맞지 않는 공백을 찾아야 하므로 결정력이 느리다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;3-교체replacement-전략-페이지-교체-알고리즘&quot;&gt;3. 교체(Replacement) 전략( 페이지 교체 알고리즘)&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;당장 필요한 페이지와 교체할 페이지를 선택하는 전략이다.
+
+주기억장치에 적재된 페이지들을 대상으로 새롭게 적재될 페이지와 교체할 페이지를 선택하는 전략이다.
+당장 적재할 페이지가 주기억장치내의 페이지 프레임에 있으면 성공(Hit) 되었다고 한다.
+당장 적재할 페이지가 주기억장치내의 페이지 프레임에 없으면 실패 혹은 페이지 부재(Page Fault)되었다고 한다.
+페이지 적중률(Hit Ratio)이 높도록 교체 전략을 선택해야 한다.
+페이지 적중률 = 성공수 / 페이지 참조 수
+효율적인 교체 전략은 프로그램의 실행속도를 향상시킨다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;3-1-교체-전략의-종류&quot;&gt;3-1 교체 전략의 종류&lt;/h3&gt;
+
+&lt;h4 id=&quot;최적화&quot;&gt;최적화&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;앞으로 가장 오랫동안 사용되지 않을 페이지와 교체한다.
+앞으로 사용할 페이지를 미리 확인하여 교체하는 방법이다.
+실제 알고리즘에서는 미리 확인할 수 없다.
+Belady의 알고리즘으로 가장 이상적이지만 실현가능성이 희박하다.
+페이지 부재(Page Fault) 횟수가 가장 적으므로 페이지 적중률이 가장 크다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img width=&quot;607&quot; alt=&quot;Pasted Graphic 17&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155454290-9c39b9c4-2c3c-48fd-934f-dcc17b49e01f.png&quot; /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;fifo&quot;&gt;FIFO&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;주기억장치 내에 가장 오래 있던 페이지와 교체한다.
+각 페이지가 주기억장치에 적재될 때마다 그때의 시간을 기억시켜 두고, 주기억장치 내에 가장 오래 있던 페이지를 교체한다.
+알고리즘이 가장 간단하다.
+페이지 부재가 가장 많이 발생한다.
+
+Belady 모순 : 프로세스에 할당된 페이지 프레임 수가 증가하면서 페이지 부재의 수가 감소하는 것이 당연하지만
+페이지 프레임 수가 증가할 때, 현실적으로 페이지 부재가 더 증가하는 모순(Anomaly) 현상이 발생한다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img width=&quot;616&quot; alt=&quot;Pasted Graphic 18&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155454413-7598a40c-bbb7-4e8a-9873-ea8420b1f874.png&quot; /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;lru&quot;&gt;LRU&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;사용(참조된)한 지 가장 오래된 페이지를 대상으로 교체한다.
+현시점에서 가장 오랫동안 사용하지 않은 페이지와 교체한다.
+각 페이지마다 계수기(시간 기억 영역)를 두어 사용하는 기법
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img width=&quot;598&quot; alt=&quot;Pasted Graphic 19&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155454423-1d0504c8-c724-4d04-aa21-9497854ffd04.png&quot; /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;lfu&quot;&gt;LFU&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;사용(참조된)한 횟수가 가장 적은 페이지와 교체한다.
+사용한 횟수를 기억할만한 참조변수를 각 페이지마다 갖게 하여 사용할 때마다 1씩 증가한다.	 &amp;lt;img width=&quot;703&quot; alt=&quot;Pasted Graphic 20&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155454436-93ebde6b-c78f-4833-b8a2-02da433e61dc.png&quot;&amp;gt; &amp;lt;br&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;nur&quot;&gt;NUR&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;최근에 호출하지도 사용하지도 않은 페이지를 제거한다.
+두 개의 하드웨어 비트인 참조 비트(Referenced Bit)와 변형 비트(Modified Bit)를 사용한다.
+참조 비트가 0이면 오래전에 호출, 1이면 최근에 호출한 것이다.
+변형 비트가 0이면 오래전에 사용, 1이면 최근에 사용한 것이다.
+참조 비트와 변형 비트는 주기적으로 갱신된다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img width=&quot;512&quot; alt=&quot;Pasted Graphic 21&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155454443-0d9fb76a-8eb9-4ad6-89f8-bb085299d8b7.png&quot; /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;second-chance이차-기회&quot;&gt;Second Chance(이차 기회)&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;가장 오래된 페이지가 최근에 사용할 가능성이 높을 것이라는 가정 하에
+가장 오래된 페이지는 교체 대상에서 제외하고 사용한 것으로 취급한다.
+각 페이지의 프레임을 FIFO 순으로 유지시키면서 LRU와 근사 알고리즘처럼 참조 변수를 갖게 한다.
+FIFO의 2차 기회부여 방식이다. 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;pff&quot;&gt;PFF&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;워킹 셋에 존재하는 페이지들을 관찰하여 최근에 자주 사용되고 있지 않은 페이지와 워킹 셋에 속하지 않은 페이지 중에
+최근에 자주 사용하는 페이지와 교체한다. *** &amp;lt;br&amp;gt;
+
+개인 공부 기록용 블로그입니다. 오류나 틀린 부분이 있을 경우 
+댓글 혹은 메일로 지적해주시면 감사하겠습니다! 😄
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Data processing" /><category term="주기억장치" /><category term="정보처리산업기사" /><category term="자격증" /><summary type="html">강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.</summary></entry><entry><title type="html">[ 필기 ] 디스크 관리 part.1</title><link href="http://localhost:4000/data%20processing/written-test-part14/" rel="alternate" type="text/html" title="[ 필기 ] 디스크 관리 part.1" /><published>2022-02-24T00:00:00+09:00</published><updated>2022-02-24T00:00:00+09:00</updated><id>http://localhost:4000/data%20processing/written-test-part14</id><content type="html" xml:base="http://localhost:4000/data%20processing/written-test-part14/">&lt;p&gt;강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;img width=&quot;654&quot; alt=&quot;(Access Arm)&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155454812-20216680-0c97-4f60-9d68-20ac356e2153.png&quot; /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;1-디스크-구조&quot;&gt;1. 디스크 구조&lt;/h2&gt;
+
+&lt;h3 id=&quot;트랙track&quot;&gt;트랙(Track)&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;디스크의 회전축을 중심으로 동심원 모양으로 디스크의 종류마다 개수가 모두 다르다.
+일반적으로 200트랙(0 ~ 199 트랙)이다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;섹터sector&quot;&gt;섹터(Sector)&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;하나의 트랙을 몇 개로 분할한 블록으로 한 개의 섹터는 일반적으로 512byte ~ 1024byte 용량을 갖는다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;iplinitial-program-loader&quot;&gt;IPL(Initial Program Loader)&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;디스크를 접근할 때 디스크의 물리적인 정보를 제공한다.
+일반적으로 부트(Boot) 섹터라고 한다.
+물리적인 정보는 트랙수, 섹터수, 섹터당 byte 수 등이다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;fatfile-allocation-table&quot;&gt;FAT(File Allocation Table)&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;효율적인 저장을 위해서 여러개의 복사본을 가지고 있다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;디렉토리directory&quot;&gt;디렉토리(Directory)&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;디스크에 저장된 파일의 기본적인 정보를 수록하는 공간으로 파일명, 파일 속성, 작성 날짜, 작성 시간, 파일 위치, 파일의 크기 등의 정보를 갖는다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;실린더cylinder&quot;&gt;실린더(Cylinder)&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;회전축을 중심으로 같은 거리에 있는 트랙들의 집합이다.
+하드디스크처럼 여러개의 디스크 판을 사용할 때 사용하는 단어로 플로피 디스크처럼 한 장을 사용할 경우에는 트랙과 같은 말이다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;2-드라이브&quot;&gt;2. 드라이브&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;디스크를 감싸고 있는 부분이다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;액세스-암-access-arm&quot;&gt;액세스 암 (Access Arm)&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;읽기/쓰기 헤드를 움직여주는 막대
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;고정-축-boom&quot;&gt;고정 축 (Boom)&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;액세스 암들을 동시에 이동시키는 막대로 탐색시간(Seek time)은 고정축의 이동시간이 된다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;헤드-head&quot;&gt;헤드 (Head)&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;데이터를 읽어 내거나 기록하는 장치
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;3-디스크-접근시간&quot;&gt;3. 디스크 접근시간&lt;/h2&gt;
+
+&lt;h3 id=&quot;탐색시간seek-time&quot;&gt;탐색시간(Seek Time)&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;디스크 상의 원하는 데이터를 액세스하기 위해 트랙 또는 실린더에 헤드를 위치시키는데 걸리는 시간
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;회전-지연-시간latency-time&quot;&gt;회전 지연 시간(Latency Time)&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;지정된 트랙에 위치한 헤드가 원하는 섹터에 위치시키는데 걸리는 시간으로 Rotational Delay Time 또는 RPM 지연 시간이라고도 한다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;전송-시간transmission-time&quot;&gt;전송 시간(Transmission Time)&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;디스크로부터 주기억장치로 데이터가 이동하는 시간이다.
+
+검색 시간 (Search time) = 탐색시간 + 회전 지연 시간
+접근 시간(Access time) = 전송 시간 + 대기 시간(Waiting time)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;4-디스크-스케줄링-전략의-목적&quot;&gt;4. 디스크 스케줄링 전략의 목적&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;처리량을 최대화한다.
+응답시간을 최소화한다.
+응답시간의 편차를 최소화한다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;개인 공부 기록용 블로그입니다. 오류나 틀린 부분이 있을 경우 
+댓글 혹은 메일로 지적해주시면 감사하겠습니다! 😄
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Data processing" /><category term="디스크관리" /><category term="정보처리산업기사" /><category term="자격증" /><summary type="html">강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.</summary></entry></feed>
