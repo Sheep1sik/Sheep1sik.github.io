@@ -1,4 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-01T17:36:23+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html"> 공공돌 블로그 </title><subtitle>공부 &amp; 취미 블로그</subtitle><author><name>공부하는 공돌이📖</name></author><entry><title type="html">[11047번] : 동전0</title><link href="http://localhost:4000/boj/11047/" rel="alternate" type="text/html" title="[11047번] : 동전0" /><published>2022-03-01T00:00:00+09:00</published><updated>2022-03-01T00:00:00+09:00</updated><id>http://localhost:4000/boj/11047</id><content type="html" xml:base="http://localhost:4000/boj/11047/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-03T23:21:12+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html"> 공공돌 블로그 </title><subtitle>공부 &amp; 취미 블로그</subtitle><author><name>공부하는 공돌이📖</name></author><entry><title type="html">[2839번] 설탕배달</title><link href="http://localhost:4000/boj/2839/" rel="alternate" type="text/html" title="[2839번] 설탕배달" /><published>2022-03-03T00:00:00+09:00</published><updated>2022-03-03T00:00:00+09:00</updated><id>http://localhost:4000/boj/2839</id><content type="html" xml:base="http://localhost:4000/boj/2839/">&lt;hr /&gt;
+&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+&lt;p&gt;상근이는 요즘 설탕공장에서 설탕을 배달하고 있다. 상근이는 지금 사탕가게에 설탕을 정확하게 N킬로그램을 배달해야 한다. 설탕공장에서 만드는 설탕은 봉지에 담겨져 있다. 봉지는 3킬로그램 봉지와 5킬로그램 봉지가 있다.&lt;/p&gt;
+
+&lt;p&gt;상근이는 귀찮기 때문에, 최대한 적은 봉지를 들고 가려고 한다. 예를 들어, 18킬로그램 설탕을 배달해야 할 때, 3킬로그램 봉지 6개를 가져가도 되지만, 5킬로그램 3개와 3킬로그램 1개를 배달하면, 더 적은 개수의 봉지를 배달할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;상근이가 설탕을 정확하게 N킬로그램 배달해야 할 때, 봉지 몇 개를 가져가면 되는지 그 수를 구하는 프로그램을 작성하시오.&lt;/p&gt;
+
+&lt;h2 id=&quot;입력&quot;&gt;입력&lt;/h2&gt;
+&lt;p&gt;첫째 줄에 N이 주어진다. (3 ≤ N ≤ 5000)&lt;/p&gt;
+
+&lt;h2 id=&quot;출력&quot;&gt;출력&lt;/h2&gt;
+&lt;p&gt;상근이가 배달하는 봉지의 최소 개수를 출력한다. 만약, 정확하게 N킬로그램을 만들 수 없다면 -1을 출력한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;예제-입력-1&quot;&gt;예제 입력 1&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;18
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;예제-출력-1&quot;&gt;예제 출력 1&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;예제-입력-2&quot;&gt;예제 입력 2&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;예제-출력-2&quot;&gt;예제 출력 2&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;해설-및-소스코드&quot;&gt;해설 및 소스코드&lt;/h2&gt;
+&lt;p&gt;설탕의 무게 N을 입력받고, 5KG 봉지 3KG봉지를 섞어서 가져가는 경우의 수 중 설탕봉지 최소 갯수를 구하는 문제이다.
+설탕봉지를 최소값으로 가져가려면 5KG 봉지를 많이 사용해야 하기 때문에 설탕의 무게(N)을 5로 먼저 나누어 본 후 (N - 5KG 설탕봉지 수) % 3 이 0으로 나누어 떨어지면 정답을 출력하게 만들면 된다. 만약 나누어 떨어지지 않으면 5KG설탕 봉(Sugar_5)를 1씩 줄여가며 반복한다.
+5KG설탕봉지(Sugar_5)가 Sugar &amp;lt; 0이 될때까지 반복해도 나누어 떨어지지 않으면 -1을 출력한다.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/Sheep1sik/6c9b226725c24529947650837ff6df74.js&quot;&gt;&lt;/script&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;개인 공부 기록용 블로그입니다. 오류나 틀린 부분이 있을 경우 
+댓글 혹은 메일로 지적해주시면 감사하겠습니다! 😄
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="BOJ" /><category term="Cpp" /><category term="BOJ" /><category term="Algorithm" /><category term="Greedy" /><summary type="html">문제 상근이는 요즘 설탕공장에서 설탕을 배달하고 있다. 상근이는 지금 사탕가게에 설탕을 정확하게 N킬로그램을 배달해야 한다. 설탕공장에서 만드는 설탕은 봉지에 담겨져 있다. 봉지는 3킬로그램 봉지와 5킬로그램 봉지가 있다.</summary></entry><entry><title type="html">[11047번] : 동전0</title><link href="http://localhost:4000/boj/11047/" rel="alternate" type="text/html" title="[11047번] : 동전0" /><published>2022-03-01T00:00:00+09:00</published><updated>2022-03-01T00:00:00+09:00</updated><id>http://localhost:4000/boj/11047</id><content type="html" xml:base="http://localhost:4000/boj/11047/">&lt;hr /&gt;
 
 &lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
 
@@ -624,85 +668,4 @@ FIFO의 2차 기회부여 방식이다.
 댓글 혹은 메일로 지적해주시면 감사하겠습니다! 😄
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Data processing" /><category term="주기억장치" /><category term="정보처리산업기사" /><category term="자격증" /><summary type="html">강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.</summary></entry><entry><title type="html">[ 필기 ] 디스크 관리 part.1</title><link href="http://localhost:4000/data%20processing/written-test-part14/" rel="alternate" type="text/html" title="[ 필기 ] 디스크 관리 part.1" /><published>2022-02-24T00:00:00+09:00</published><updated>2022-02-24T00:00:00+09:00</updated><id>http://localhost:4000/data%20processing/written-test-part14</id><content type="html" xml:base="http://localhost:4000/data%20processing/written-test-part14/">&lt;p&gt;강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;img width=&quot;654&quot; alt=&quot;(Access Arm)&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155454812-20216680-0c97-4f60-9d68-20ac356e2153.png&quot; /&gt;
-&lt;br /&gt;&lt;/p&gt;
-&lt;h2 id=&quot;1-디스크-구조&quot;&gt;1. 디스크 구조&lt;/h2&gt;
-
-&lt;h3 id=&quot;트랙track&quot;&gt;트랙(Track)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;디스크의 회전축을 중심으로 동심원 모양으로 디스크의 종류마다 개수가 모두 다르다.
-일반적으로 200트랙(0 ~ 199 트랙)이다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;섹터sector&quot;&gt;섹터(Sector)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;하나의 트랙을 몇 개로 분할한 블록으로 한 개의 섹터는 일반적으로 512byte ~ 1024byte 용량을 갖는다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;iplinitial-program-loader&quot;&gt;IPL(Initial Program Loader)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;디스크를 접근할 때 디스크의 물리적인 정보를 제공한다.
-일반적으로 부트(Boot) 섹터라고 한다.
-물리적인 정보는 트랙수, 섹터수, 섹터당 byte 수 등이다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;fatfile-allocation-table&quot;&gt;FAT(File Allocation Table)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;효율적인 저장을 위해서 여러개의 복사본을 가지고 있다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;디렉토리directory&quot;&gt;디렉토리(Directory)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;디스크에 저장된 파일의 기본적인 정보를 수록하는 공간으로 파일명, 파일 속성, 작성 날짜, 작성 시간, 파일 위치, 파일의 크기 등의 정보를 갖는다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;실린더cylinder&quot;&gt;실린더(Cylinder)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;회전축을 중심으로 같은 거리에 있는 트랙들의 집합이다.
-하드디스크처럼 여러개의 디스크 판을 사용할 때 사용하는 단어로 플로피 디스크처럼 한 장을 사용할 경우에는 트랙과 같은 말이다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;2-드라이브&quot;&gt;2. 드라이브&lt;/h2&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;디스크를 감싸고 있는 부분이다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;액세스-암-access-arm&quot;&gt;액세스 암 (Access Arm)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;읽기/쓰기 헤드를 움직여주는 막대
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;고정-축-boom&quot;&gt;고정 축 (Boom)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;액세스 암들을 동시에 이동시키는 막대로 탐색시간(Seek time)은 고정축의 이동시간이 된다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;헤드-head&quot;&gt;헤드 (Head)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;데이터를 읽어 내거나 기록하는 장치
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;3-디스크-접근시간&quot;&gt;3. 디스크 접근시간&lt;/h2&gt;
-
-&lt;h3 id=&quot;탐색시간seek-time&quot;&gt;탐색시간(Seek Time)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;디스크 상의 원하는 데이터를 액세스하기 위해 트랙 또는 실린더에 헤드를 위치시키는데 걸리는 시간
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;회전-지연-시간latency-time&quot;&gt;회전 지연 시간(Latency Time)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;지정된 트랙에 위치한 헤드가 원하는 섹터에 위치시키는데 걸리는 시간으로 Rotational Delay Time 또는 RPM 지연 시간이라고도 한다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;전송-시간transmission-time&quot;&gt;전송 시간(Transmission Time)&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;디스크로부터 주기억장치로 데이터가 이동하는 시간이다.
-
-검색 시간 (Search time) = 탐색시간 + 회전 지연 시간
-접근 시간(Access time) = 전송 시간 + 대기 시간(Waiting time)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;4-디스크-스케줄링-전략의-목적&quot;&gt;4. 디스크 스케줄링 전략의 목적&lt;/h2&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;처리량을 최대화한다.
-응답시간을 최소화한다.
-응답시간의 편차를 최소화한다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;개인 공부 기록용 블로그입니다. 오류나 틀린 부분이 있을 경우 
-댓글 혹은 메일로 지적해주시면 감사하겠습니다! 😄
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Data processing" /><category term="디스크관리" /><category term="정보처리산업기사" /><category term="자격증" /><summary type="html">강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Data processing" /><category term="주기억장치" /><category term="정보처리산업기사" /><category term="자격증" /><summary type="html">강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.</summary></entry></feed>
