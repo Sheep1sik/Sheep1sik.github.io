@@ -134,8 +134,8 @@
   }
 
   img {
-    max-width: 200px;
-    border-radius: 50%;
+    max-width: 200px; // 프로필 크기 바꾸기
+    border-radius: 50%; // 프로필 곡률 , 작아질수록 사각형에 가까워짐
 
     @include breakpoint($large) {
       padding: 5px;
