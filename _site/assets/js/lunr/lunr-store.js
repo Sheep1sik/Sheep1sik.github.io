@@ -157,7 +157,7 @@ var store = [{
       },{
         "title": " [11047번] : 동전0 ",
         "excerpt":"문제 준규가 가지고 있는 동전은 총 N종류이고, 각각의 동전을 매우 많이 가지고 있다. 동전을 적절히 사용해서 그 가치의 합을 K로 만들려고 한다. 이때 필요한 동전 개수의 최솟값을 구하는 프로그램을 작성하시오. 입력 첫째 줄에 N과 K가 주어진다. (1 ≤ N ≤ 10, 1 ≤ K ≤ 100,000,000) 둘째 줄부터 N개의 줄에...","categories": ["BOJ"],
-        "tags": ["Cpp","BOJ","Algorithm"],
+        "tags": ["Cpp","BOJ","Algorithm","Greedy"],
         "url": "http://localhost:4000/boj/11047/",
         "teaser": null
       },{
@@ -165,5 +165,23 @@ var store = [{
         "excerpt":"문제 상근이는 요즘 설탕공장에서 설탕을 배달하고 있다. 상근이는 지금 사탕가게에 설탕을 정확하게 N킬로그램을 배달해야 한다. 설탕공장에서 만드는 설탕은 봉지에 담겨져 있다. 봉지는 3킬로그램 봉지와 5킬로그램 봉지가 있다. 상근이는 귀찮기 때문에, 최대한 적은 봉지를 들고 가려고 한다. 예를 들어, 18킬로그램 설탕을 배달해야 할 때, 3킬로그램 봉지 6개를 가져가도 되지만, 5킬로그램 3개와...","categories": ["BOJ"],
         "tags": ["Cpp","BOJ","Algorithm","Greedy"],
         "url": "http://localhost:4000/boj/2839/",
+        "teaser": null
+      },{
+        "title": "[ 기초부터 웹사이트 만들기 ] Part.2",
+        "excerpt":"우리가 만들것은 KakaoTalk이다. 하지만 나는 아직 실력이 부족해 어플로 만드는 것이 아닌 Html과 Css를 사용하여 각각의 화면을 만들고 넘어가는 형식으로 만들것이다. 처음으로 만들것은 카카오톡 로그인 창이다. 카카오톡 로그인창은 아래 그림과 같다. 우선 그림과 같이 핸드폰 상단의 상태바의 기초적인걸 만들어 볼것이다. 파일 생성 및 소스코드 작성 먼저 전에 만들었던 파일 web_clone에...","categories": ["create-web"],
+        "tags": ["Html","Css","web"],
+        "url": "http://localhost:4000/create-web/web2/",
+        "teaser": null
+      },{
+        "title": " [11399번] ATM ",
+        "excerpt":"문제 인하은행에는 ATM이 1대밖에 없다. 지금 이 ATM앞에 N명의 사람들이 줄을 서있다. 사람은 1번부터 N번까지 번호가 매겨져 있으며, i번 사람이 돈을 인출하는데 걸리는 시간은 Pi분이다. 사람들이 줄을 서는 순서에 따라서, 돈을 인출하는데 필요한 시간의 합이 달라지게 된다. 예를 들어, 총 5명이 있고, P1 = 3, P2 = 1, P3 =...","categories": ["BOJ"],
+        "tags": ["Cpp","BOJ","Algorithm","Greedy"],
+        "url": "http://localhost:4000/boj/11399/",
+        "teaser": null
+      },{
+        "title": "프로필 사진 및 모양(곡률) 바꾸기",
+        "excerpt":"프로필 사진 변경 먼저 프로필 사진을 바꿔보도록 하자. 프로필 사진에 들어갈 원하는 사진을 골라 /assets/에 업로드를 한다. 만약 사진의 픽셀을 조정하고 싶다면 , 맥북 기준으로 미리보기를 연다음 픽셀을 조정하면 된다. 나 같은 경우 높이 732 , 너비 549로 설정해주었다. 사진을 /assets/에 업로드를 하였다면 이제 /_config.yml 파일을 검색하여 수정해주자. #Site Author을 검색하면...","categories": ["Blog"],
+        "tags": ["Blog","Github","Jekyll"],
+        "url": "http://localhost:4000/blog/BlogProfile/",
         "teaser": null
       }]
