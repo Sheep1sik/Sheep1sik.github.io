@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-23T15:18:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html"> 공공돌 블로그 </title><subtitle>공부 &amp; 취미 블로그</subtitle><author><name>공부하는 공돌이📖</name></author><entry><title type="html">프로필 사진 및 모양(곡률) 바꾸기</title><link href="http://localhost:4000/blog/BlogProfile/" rel="alternate" type="text/html" title="프로필 사진 및 모양(곡률) 바꾸기" /><published>2022-03-23T00:00:00+09:00</published><updated>2022-03-23T00:00:00+09:00</updated><id>http://localhost:4000/blog/BlogProfile</id><content type="html" xml:base="http://localhost:4000/blog/BlogProfile/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-23T15:43:05+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html"> 공공돌 블로그 </title><subtitle>공부 &amp; 취미 블로그</subtitle><author><name>공부하는 공돌이📖</name></author><entry><title type="html">프로필 사진 및 모양(곡률) 바꾸기</title><link href="http://localhost:4000/blog/BlogProfile/" rel="alternate" type="text/html" title="프로필 사진 및 모양(곡률) 바꾸기" /><published>2022-03-23T00:00:00+09:00</published><updated>2022-03-23T00:00:00+09:00</updated><id>http://localhost:4000/blog/BlogProfile</id><content type="html" xml:base="http://localhost:4000/blog/BlogProfile/">&lt;hr /&gt;
 &lt;h2 id=&quot;프로필-사진-변경&quot;&gt;프로필 사진 변경&lt;/h2&gt;
 
 &lt;p&gt;먼저 프로필 사진을 바꿔보도록 하자.
@@ -72,7 +72,38 @@
 댓글 혹은 메일로 지적해주시면 감사하겠습니다! 😄
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Blog" /><category term="Blog" /><category term="Github" /><category term="Jekyll" /><summary type="html">프로필 사진 변경</summary></entry><entry><title type="html">[11399번] ATM</title><link href="http://localhost:4000/boj/11399/" rel="alternate" type="text/html" title="[11399번] ATM" /><published>2022-03-08T00:00:00+09:00</published><updated>2022-03-08T00:00:00+09:00</updated><id>http://localhost:4000/boj/11399</id><content type="html" xml:base="http://localhost:4000/boj/11399/">&lt;hr /&gt;
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Blog" /><category term="Blog" /><category term="Github" /><category term="Jekyll" /><summary type="html">프로필 사진 변경</summary></entry><entry><title type="html">[1000번] A + B</title><link href="http://localhost:4000/boj/1000/" rel="alternate" type="text/html" title="[1000번] A + B" /><published>2022-03-23T00:00:00+09:00</published><updated>2022-03-23T00:00:00+09:00</updated><id>http://localhost:4000/boj/1000</id><content type="html" xml:base="http://localhost:4000/boj/1000/">&lt;h2 id=&quot;레벨--bronze-v&quot;&gt;📚레벨 : Bronze V&lt;/h2&gt;
+&lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
+&lt;p&gt;두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.&lt;/p&gt;
+
+&lt;h2 id=&quot;입력&quot;&gt;입력&lt;/h2&gt;
+&lt;p&gt;첫째 줄에 A와 B가 주어진다. (0 &amp;lt; A, B &amp;lt; 10)&lt;/p&gt;
+
+&lt;h2 id=&quot;출력&quot;&gt;출력&lt;/h2&gt;
+&lt;p&gt;첫째 줄에 A+B를 출력한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;예시-입력&quot;&gt;예시 입력&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1 2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;예시-출력&quot;&gt;예시 출력&lt;/h2&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;해설-및-소스코드&quot;&gt;해설 및 소스코드&lt;/h2&gt;
+&lt;p&gt;간단한 더하기 문제이다.
+변수 a와 b를 만들어주고 입력받는다.
+입력받은 값을 a+b로 출력시킨다. 
+&lt;script src=&quot;https://gist.github.com/Sheep1sik/b5cf8ecc0d078436217b672e93927abb.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;개인 공부 기록용 블로그입니다. 오류나 틀린 부분이 있을 경우 
+댓글 혹은 메일로 지적해주시면 감사하겠습니다! 😄
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="BOJ" /><category term="Cpp" /><category term="BOJ" /><summary type="html">📚레벨 : Bronze V 문제 두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.</summary></entry><entry><title type="html">[11399번] ATM</title><link href="http://localhost:4000/boj/11399/" rel="alternate" type="text/html" title="[11399번] ATM" /><published>2022-03-08T00:00:00+09:00</published><updated>2022-03-08T00:00:00+09:00</updated><id>http://localhost:4000/boj/11399</id><content type="html" xml:base="http://localhost:4000/boj/11399/">&lt;hr /&gt;
 &lt;h2 id=&quot;문제&quot;&gt;문제&lt;/h2&gt;
 &lt;p&gt;인하은행에는 ATM이 1대밖에 없다. 지금 이 ATM앞에 N명의 사람들이 줄을 서있다. 사람은 1번부터 N번까지 번호가 매겨져 있으며, i번 사람이 돈을 인출하는데 걸리는 시간은 Pi분이다.&lt;/p&gt;
 
@@ -558,78 +589,4 @@ kill -9 PID번호 (나 같은 경우는 5385)
 댓글 혹은 메일로 지적해주시면 감사하겠습니다! 😄
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Error" /><category term="Github" /><category term="Error" /><summary type="html">📝 Rails: 이미 사용 중인 주소 - bind(2) 해결방법</summary></entry><entry><title type="html">[ 필기 ] 정보통신</title><link href="http://localhost:4000/data%20processing/written-test-part18/" rel="alternate" type="text/html" title="[ 필기 ] 정보통신" /><published>2022-02-25T00:00:00+09:00</published><updated>2022-02-25T00:00:00+09:00</updated><id>http://localhost:4000/data%20processing/written-test-part18</id><content type="html" xml:base="http://localhost:4000/data%20processing/written-test-part18/">&lt;p&gt;강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;h2 id=&quot;1-정보통신의-정의&quot;&gt;1. 정보통신의 정의&lt;/h2&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;정보통신 = 전기 통신 + 컴퓨터(정보처리)
-
-정보처리가 가능한 기계와 기계간의 전기적인 통신회선을 통해 정보를 송수신하는 통신이다.
-컴퓨터와 통신 기술의 결합에 의해 통신처리 기능과 정보처리 기능은 물론 정보의 변환, 저장 과정이 추가된 형태의 통신이다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;2-데이터-통신의-정의&quot;&gt;2. 데이터 통신의 정의&lt;/h2&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;데이터통신 = 데이터 처리 + 데이터 전송
-
-컴퓨터 통신이라고 하며 컴퓨터에서 처리된 데이터를 통신회선을 통해 수신측 컴퓨터에 전송하는 통신이다.
-데이터 전송이란 컴퓨터나 데이터 단말에 의해 처리할 또는 처리된 정보의 전송을 말한다.
-컴퓨터와 단말기 혹은 컴퓨터 간의 데이터를 송수신 하는 통신이다.
-전기 통신 회선을 통하여 서로를 접속하고 2진수로 표시된 디지털 데이터를 송수신하는 통신이다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;3-통신-시스템의-발전&quot;&gt;3. 통신 시스템의 발전&lt;/h2&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;모스부호를 이용한 전신기
-전기,소리,빛으로 전달할 수 있는 부호이다.
-모스 부호를 전기 신호로 전달할 수 있는 장치를 전신기라고 한다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;벨의-전화기&quot;&gt;벨의 전화기&lt;/h3&gt;
-
-&lt;p&gt;&lt;img width=&quot;672&quot; alt=&quot;Pasted Graphic 43&quot; src=&quot;https://user-images.githubusercontent.com/88019314/155645459-e3f23d50-1ae0-4db7-8ad5-5dda9038ba2d.png&quot; /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;교환기&quot;&gt;교환기&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;송신측과 수신측의 직접 연결은 통신회선 비용이 많이 든다.
-수신측에서 인접한 곳에 교환기로 각각의 전화기로 교환해주면 통신회선 비용을 낮출 수 있다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;sage&quot;&gt;SAGE&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;반자동 방공 시스템으로 군사용이다.
-최초의 컴퓨터를 이용한 데이터 통신 시스템으로 의미가 매우 크다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;sabre&quot;&gt;SABRE&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;미국 항공기 좌석 예약 시스템으로 최초의 상업용 통신 시스템이다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;ctss&quot;&gt;CTSS&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;미MIT 공과대학에서 개발한 최초의 학내 컴퓨터 통신 시스템으로 시간 분할 기술을 이용하였다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;aloha&quot;&gt;ALOHA&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;최초의 무선(라디오) 패킷(Packet) 네트워크 시스템이다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;arpanet&quot;&gt;ARPANET&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;최초의 유선 패킷 시스템으로 인터넷 기술의 모체이다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;sna&quot;&gt;SNA&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;IBM의 SNA는 컴퓨터간 접속을 용의하게 한 체계화된 네트워크 방식이다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;4-인터넷의-발전-순서&quot;&gt;4. 인터넷의 발전 순서&lt;/h2&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ARPANET -&amp;gt; TCP/IP -&amp;gt; NSFNET -&amp;gt; WWW
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;개인 공부 기록용 블로그입니다. 오류나 틀린 부분이 있을 경우 
-댓글 혹은 메일로 지적해주시면 감사하겠습니다! 😄
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Data processing" /><category term="정보통신" /><category term="정보처리산업기사" /><category term="자격증" /><summary type="html">강의를 듣고 정리한 필기입니다. 😀 지식 공유보단 개인적인 복습을 목적으로 포스팅하였습니다.</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn--primary align-right&quot;&gt;맨 위로 이동하기&lt;/a&gt;&lt;/p&gt;</content><author><name>공부하는 공돌이📖</name></author><category term="Error" /><category term="Github" /><category term="Error" /><summary type="html">📝 Rails: 이미 사용 중인 주소 - bind(2) 해결방법</summary></entry></feed>

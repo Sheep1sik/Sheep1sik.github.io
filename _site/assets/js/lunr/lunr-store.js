@@ -179,6 +179,12 @@ var store = [{
         "url": "http://localhost:4000/boj/11399/",
         "teaser": null
       },{
+        "title": " [1000번] A + B ",
+        "excerpt":"📚레벨 : Bronze V 문제 두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오. 입력 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 첫째 줄에 A+B를 출력한다. 예시 입력 1 2 예시 출력 3 해설 및 소스코드 간단한 더하기 문제이다. 변수 a와 b를 만들어주고 입력받는다....","categories": ["BOJ"],
+        "tags": ["Cpp","BOJ"],
+        "url": "http://localhost:4000/boj/1000/",
+        "teaser": null
+      },{
         "title": "프로필 사진 및 모양(곡률) 바꾸기",
         "excerpt":"프로필 사진 변경 먼저 프로필 사진을 바꿔보도록 하자. 프로필 사진에 들어갈 원하는 사진을 골라 /assets/에 업로드를 한다. 만약 사진의 픽셀을 조정하고 싶다면 , 맥북 기준으로 미리보기를 연다음 픽셀을 조정하면 된다. 나 같은 경우 높이 732 , 너비 549로 설정해주었다. 사진을 /assets/에 업로드를 하였다면 이제 /_config.yml 파일을 검색하여 수정해주자. #Site Author을 검색하면...","categories": ["Blog"],
         "tags": ["Blog","Github","Jekyll"],
